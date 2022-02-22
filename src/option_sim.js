@@ -206,7 +206,6 @@ function radio_check(element) {
 
 function page_load() {
 //初期化用
-    localStorage.clear();
     let windowSize = window.innerHeight  - 115;
 
     for(let i = 1 ; i <= 2 ; i++) {
@@ -400,7 +399,6 @@ function percent_input(element) {
             document.getElementById(element + "-txt" + i).innerHTML = "";
         }
     }
-    localStorage.setItem(element + "-partsData" , JSON.stringify(partsData[element]));
     total_option_calc();
 }
 
@@ -411,7 +409,6 @@ function option_value(element) {
         partsData[element].op[i].value = value_data.value;
     }
     total_option_calc();
-    localStorage.setItem(element + "-partsData" , JSON.stringify(partsData[element]));
 }
 
 function total_option_calc() {
@@ -443,7 +440,6 @@ function total_option_calc() {
     total_option_code = total_option_code + '</table>';
 
     document.getElementById("total-option").innerHTML = total_option_code;
-    sessionStorage.setItem("toc", JSON.stringify(total_option_value));
 }
 
 
@@ -458,6 +454,29 @@ function rarityOnChangeEvent(id_num) {
 function textOnChangeEvent(id_num) {
     option_value(parts_id[id_num]);
     
+}
+
+function local_storage_save() {
+    let result = window.confirm("ローカルへ編成データを保存しますか？");
+
+    if(result) {
+        for(let i = 0 ; i < parts_id.length ; i++) {
+            localStorage.setItem(parts_id[i] + "-partsData" , JSON.stringify(partsData[parts_id[i]]));
+        }
+        alert("保存が完了しました。");
+    } 
+}
+
+function local_storage_delete() {
+    let result = window.confirm("ローカルの編成データを削除し、\r\nページを初期化しますか？");
+
+    if(result) {
+        localStorage.clear();
+
+        alert("データ削除が完了しました。");
+    }
+
+    window.location.reload();
 }
 
 window.onload = page_load;

@@ -10,8 +10,11 @@
 
     </head>
     <body style="overflow-y: hidden;"><form id="form1">
-
-        <h1 style="line-height: 50%;">戦術機特性編成シミュレーター</h1>
+        <table>
+        <td style="width: 800px;"><h1 style="line-height: 50%;">戦術機特性編成シミュレーター</h1></td>
+        <td style="width: 150px;"><input type="button" value="保存" style="width: 100px;" onClick="local_storage_save()"></td>
+        <td style="width: 150px;"><input type="button" value="リセット" style="width: 100px;" onClick="local_storage_delete()"></td>
+        </table>
         <div style="white-space: nowrap;">
             <div>
                 <div class="mainframe" id="mainframe1" style="overflow-x: hidden;">
