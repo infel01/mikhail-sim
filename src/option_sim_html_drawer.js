@@ -60,7 +60,7 @@ function total_option_table_draw(DataBox) {
     }
 
     htm_cd1 =   '<tr><td style="width: 200px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">'+ master_option_list[DataBox.id].name +'</td>' +
-                '<td style="width: 75px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + DataBox.value + percent_draw + '</td>' +
-                '<td style="width: 72px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td></tr>';
+                '<td style="width: 80px; text-align: right; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + DataBox.value + percent_draw + '</td>' +
+                '<td style="width: 80px; text-align: right; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td></tr>';
     return htm_cd1;
 }

@@ -14,9 +14,6 @@
     font-size: 16px;
     font-weight: bold;
 }
-body {
-    scrollbar-track-color: #FFFFFF;
-}
 
 .mainframe {
     overflow-y: scroll;
@@ -113,14 +110,14 @@ body {
 }
 
 .option-table [id*="opvalue"] {
-    width: 55px;
+    width: 59px;
     padding: 1px 1px;
 }
 
 .option-table input[type="text"] {
     font-size: 12px;
     text-align: right;
-    width: 30px;
+    width: 40px;
     display: "flex";
 }
 
@@ -159,8 +156,6 @@ body {
     font-size: 12px;
     display: flex;
 }
-
-/* サンプル */
 
 *,
 *:before,

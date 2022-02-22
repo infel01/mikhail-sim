@@ -221,7 +221,6 @@ function page_load() {
     for(let i = 0 ; i < parts_id.length ; i++) {
         parts_table_draw(parts_id[i]);
         page_loading(parts_id[i]);
-        console.log(parts_id[i]);
     }
 
     sessionStorage.setItem('start_flg', 0);
@@ -413,7 +412,7 @@ function option_value(element) {
 
 function total_option_calc() {
     let total_option_code = '<table><tr><th style="width: 200px;">特性名称</th>' +
-    '<th style="width: 75px;">特性合計値</th><th "width: 75px;">効果リミット</th></tr>';
+    '<th style="width: 80px;">特性合計値</th><th style="width: 80px;">効果リミット</th></tr>';
     for(let i = 0 ; i < total_option_value.length ; i++) {
         total_option_value[i].value = 0;
     }
@@ -424,8 +423,13 @@ function total_option_calc() {
             if(Number(DataBox.value) > 0 && DataBox.opid != '0') {
                 for(let x = 0 ; x < total_option_value.length ; x++) {
                     if(total_option_value[x].id == DataBox.opid) {
-                        total_option_value[x].value += Number(DataBox.value);
-                        break;
+                        if(master_option_list[DataBox.opid].add_flg == 0) {
+                            if(total_option_value[x].value < Number(DataBox.value)) total_option_value[x].value = Number(DataBox.value);
+                            break;
+                        } else {
+                            total_option_value[x].value += Number(DataBox.value);
+                            break;
+                        }
                     }
                 }
             }
@@ -433,7 +437,7 @@ function total_option_calc() {
     }
 
     for(let i = 0 ; i < total_option_value.length ; i++) {
-        if(total_option_value[i].value > 0) {
+        if(total_option_value[i].value > 0 && total_option_value[i].id != 1 && total_option_value[i].id != 10 && total_option_value[i].id != 47 && total_option_value[i].id != 48 && total_option_value[i].id != 50) {
             total_option_code = total_option_code + total_option_table_draw(total_option_value[i]);
         }
     }
