@@ -1,0 +1,161 @@
+.sotowaku{
+    border: 1px black solid;
+    padding: 5px 10px;
+
+}
+
+.main-table{
+    padding: 5px 5px;
+    border: 2px black solid;
+    width: 500px;
+    background-color: #184C7E;
+    /*172a38*/
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+body {
+    scrollbar-track-color: #FFFFFF;
+}
+
+.mainframe {
+    overflow-y: scroll;
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
+}
+
+/* パーツ選択用 */
+.parts-table {
+    border-collapse: collapse;
+    font-family: 'ヒラギノ角ゴ';
+    color: black;
+}
+
+.parts-table tr {
+    display: flex;
+    border: 0px;
+}
+
+.parts-table th {
+    width: 75px;
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: #172a38;
+    color: white;
+    font-size: 12px;
+}
+
+.parts-table td {
+    width: 273px;
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parts-table select {
+    width: 273px;
+    height: 18px;
+    border: 0px;
+    font-size: 12px;
+}
+
+
+/* 特性選択用 */
+.option-table {
+    font-family: 'ヒラギノ角ゴ';
+    border-collapse: collapse;
+    color: black;
+}
+
+.option-table tr {
+    display: flex;
+    border: 0px;
+}
+
+.option-table th {
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: #172a38;
+    color: white;
+    font-size: 12px;
+}
+
+.option-table td {
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: white;
+    font-size: 12px;
+    display: flex;
+}
+
+.option-table [id$="head"] {
+    width: 75px;
+}
+
+.option-table [id*="opname"] {
+    width: 215px;
+}
+
+.option-table select {
+    width: 215px;
+    height: 18px;
+    border: 0px;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.option-table [id*="opvalue"] {
+    width: 55px;
+    padding: 1px 1px;
+}
+
+.option-table input[type="text"] {
+    font-size: 12px;
+    text-align: right;
+    width: 30px;
+    display: "flex";
+}
+
+.option-table [id*="-txt"] {
+    font-weight: lighter;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.total-option-list {
+    font-family: 'ヒラギノ角ゴ';
+    border: 1px gray solid;
+    border-collapse: collapse;
+    color: black;
+}
+
+.total-option-list tr {
+    display: flex;
+    border: 0px;
+}
+
+.total-option-list th {
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: #172a38;
+    color: white;
+    font-size: 12px;
+}
+
+.total-option-list td {
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: white;
+    font-size: 12px;
+    display: flex;
+}
