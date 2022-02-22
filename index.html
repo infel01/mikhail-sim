@@ -9,11 +9,12 @@
         <link rel="stylesheet" href="src/option_sim.css">
 
     </head>
-    <body style="overflow-y: hidden;"><form id="form1">
+        
         <table>
         <td style="width: 800px;"><h1 style="line-height: 50%;">戦術機特性編成シミュレーター</h1></td>
-        <td style="width: 150px;"><input type="button" value="保存" style="width: 100px;" onClick="local_storage_save()"></td>
-        <td style="width: 150px;"><input type="button" value="リセット" style="width: 100px;" onClick="local_storage_delete()"></td>
+        <td style="width: 100px;"><a href="#" class="btn btn-new btn-radius" onClick="local_storage_save()">SAVE</a></td>
+        <td style="width: 100px;"><a href="#" class="btn btn-new btn-radius" onClick="local_storage_load()">LOAD</a></td>
+        <td style="width: 100px;"><a href="#" class="btn btn-new btn-radius" onClick="local_storage_delete()">RESET</a></td>
         </table>
         <div style="white-space: nowrap;">
             <div>

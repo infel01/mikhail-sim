@@ -479,6 +479,15 @@ function local_storage_delete() {
     window.location.reload();
 }
 
+function local_storage_load() {
+    let result = window.confirm("保存されているローカルの編成データを\r\n読み込みますか？");
+
+    if(result) {
+        alert("データ読込を開始します。");
+        window.location.reload();
+    }
+}
+
 window.onload = page_load;
 
 window.onresize = function() {
