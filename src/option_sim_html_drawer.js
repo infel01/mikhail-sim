@@ -26,7 +26,7 @@ function parts_table_draw(parts_id) {
         htm_cd4[i] =    '<tr><th id="' + parts_id + '-head">' + option_text[i] + '</th>' +
                         '<td id="' + parts_id + '-opname' + i + '"><select id="' + parts_id + '-op' + i + '" onChange="optionOnChangeEvent(' + parts_num[parts_id] + ',' + i + ')">' +
                         '<option value="0">特性を選択してください</option></select></td>' +
-                        '<td id="' + parts_id + '-opvalue' + i + '"><input type="text" type="number" id="' + parts_id + '-value' + i + '" value="" onChange="textOnChangeEvent(' + parts_num[parts_id] + ')"><div id="' + parts_id + '-txt' + i + '"></div></td></tr>';
+                        '<td id="' + parts_id + '-opvalue' + i + '"><input type="text" inputmode="demical" type="number" id="' + parts_id + '-value' + i + '" value="" onChange="textOnChangeEvent(' + parts_num[parts_id] + ')"><div id="' + parts_id + '-txt' + i + '"></div></td></tr>';
     }
 
     htm_cd5 = '</table></td></tr></table>';

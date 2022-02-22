@@ -1,5 +1,5 @@
 .sotowaku{
-    border: 1px black solid;
+    border: 0px black solid;
     padding: 5px 10px;
 
 }
@@ -7,7 +7,7 @@
 .main-table{
     padding: 5px 5px;
     border: 2px black solid;
-    width: 500px;
+    width: 380px;
     background-color: #184C7E;
     /*172a38*/
     color: white;
@@ -22,7 +22,7 @@ body {
     overflow-y: scroll;
     display: inline-block;
     vertical-align: top;
-    height: 500px;
+    height: 400px;
 }
 
 /* パーツ選択用 */

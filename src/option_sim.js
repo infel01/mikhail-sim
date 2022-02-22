@@ -232,7 +232,7 @@ function page_load() {
 function rarity_select(element) {
     partsData[element].rarity = radio_check(element + "-r");
     const r = partsData[element].rarity;
-    const rarity_table = {
+    const rarity_table_normal = {
         1: [{type: "A", opid: "", group: "", drawflg: -1},
             {type: "B", opid: "", group: "", drawflg: -1},
             {type: "", opid: 0, group: 0, drawflg: 0},
@@ -248,6 +248,53 @@ function rarity_select(element) {
             {type: "B", opid: 0, group: 0, drawflg: 1},
             {type: "B", opid: 0, group: 0, drawflg: 1},],
     };
+
+    const rarity_table_os = {
+        1: [{type: "A", opid: "", group: "", drawflg: -1},
+            {type: "A", opid: "", group: "", drawflg: -1},
+            {type: "", opid: 0, group: 0, drawflg: 0},
+            {type: "", opid: 0, group: 0, drawflg: 0},],
+
+        2: [{type: "A", opid: "", group: "", drawflg: -1},
+            {type: "A", opid: "", group: "", drawflg: -1},
+            {type: "A", opid: 0, group: 0, drawflg: 1},
+            {type: "", opid: 0, group: 0, drawflg: 0},],
+
+        3: [{type: "A", opid: "", group: "", drawflg: -1},
+            {type: "A", opid: "", group: "", drawflg: -1},
+            {type: "A", opid: 0, group: 0, drawflg: 1},
+            {type: "A", opid: 0, group: 0, drawflg: 1},],
+    };
+
+    const rarity_table_assist = {
+        1: [{type: "B", opid: "", group: "", drawflg: -1},
+            {type: "B", opid: "", group: "", drawflg: -1},
+            {type: "", opid: 0, group: 0, drawflg: 0},
+            {type: "", opid: 0, group: 0, drawflg: 0},],
+
+        2: [{type: "B", opid: "", group: "", drawflg: -1},
+            {type: "B", opid: "", group: "", drawflg: -1},
+            {type: "B", opid: 0, group: 0, drawflg: 1},
+            {type: "", opid: 0, group: 0, drawflg: 0},],
+
+        3: [{type: "B", opid: "", group: "", drawflg: -1},
+            {type: "B", opid: "", group: "", drawflg: -1},
+            {type: "B", opid: 0, group: 0, drawflg: 1},
+            {type: "B", opid: 0, group: 0, drawflg: 1},],
+    };
+    switch(element) {
+        case 'os':
+            rarity_table = rarity_table_os;
+            break;
+        case 'assist':
+            rarity_table = rarity_table_assist;
+            break;
+        default:
+            rarity_table = rarity_table_normal;
+            break;
+    }
+
+    var rarity_table;
     let start_flg = sessionStorage.getItem("start_flg");
 
     for(let i = 0 ; i <= 3 ; i++) {
@@ -304,6 +351,7 @@ function option_select(element, num) {
 
     for(let x = 0 ; x <= 4 ; x++) {
         let select_delete = document.getElementById(element + "-op" + x);
+        let reset_flg = 1;
 
         for(let y = select_delete.length ; y >= 0 ; y--) {
             select_delete.remove(y);
@@ -325,8 +373,18 @@ function option_select(element, num) {
                 add_select.textContent = add_option[i].name;
                 document.getElementById(element + "-op" + x).appendChild(add_select);
             }
+            if(partsData[element].op[x].opid == add_option[i].id) reset_flg = 0;
         }
-        document.getElementById(element + "-op" + x).value = partsData[element].op[x].opid;
+        if(reset_flg == 0) {
+            document.getElementById(element + "-op" + x).value = partsData[element].op[x].opid;
+        }else if(reset_flg == 1) {
+            document.getElementById(element + "-op" + x).value = '0';
+            document.getElementById(element + "-value" + x).value = "";
+            partsData[element].op[x].opid = 0;
+            partsData[element].op[x].value = 0;
+        }
+
+
     }
     percent_input(element);
 }
