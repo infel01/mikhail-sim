@@ -212,7 +212,7 @@ function page_load() {
         if(i == 1) {
             document.getElementById("mainframe" + i).style.height = windowSize + 'px';
         } else {
-            document.getElementById("mainframe" + i).style.height = (windowSize - 35) + 'px';
+            document.getElementById("mainframe" + i).style.height = (windowSize - 160) + 'px';
         }
     }
 
@@ -505,7 +505,7 @@ window.onresize = function() {
             if(i == 1) {
                 document.getElementById("mainframe" + i).style.height = windowSize + 'px';
             } else {
-                document.getElementById("mainframe" + i).style.height = (windowSize - 35) + 'px';
+                document.getElementById("mainframe" + i).style.height = (windowSize - 160) + 'px';
             }
         }
     }, 200);
