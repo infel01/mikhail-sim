@@ -42,16 +42,17 @@ function total_option_table_draw(DataBox) {
     let percent_draw = "";
     let color_flg = 0;
 
+    let re_calc = Math.floor(DataBox.value * 100) / 100;
+
     if(master_option_list[DataBox.id].percent_flg == 1) {
         percent_draw = '%';
     } else if(DataBox.id == 47) {
         percent_draw = '00';
     };
 
-    let color_value = DataBox.value - master_option_list[DataBox.id].effect_limit;
-    console.log(color_value);
+    let color_value = re_calc - master_option_list[DataBox.id].effect_limit;
 
-    if(color_value <= 10) {
+    if(color_value <= 0) {
         color_flg = 0;
     } else if(color_value <= 20) {
         color_flg = 1;
@@ -60,7 +61,7 @@ function total_option_table_draw(DataBox) {
     }
 
     htm_cd1 =   '<tr><td style="width: 200px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">'+ master_option_list[DataBox.id].name +'</td>' +
-                '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + DataBox.value + percent_draw + '</td>' +
+                '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + re_calc + percent_draw + '</td>' +
                 '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td></tr>';
     return htm_cd1;
 }

@@ -206,13 +206,13 @@ function radio_check(element) {
 
 function page_load() {
 //初期化用
-    let windowSize = window.innerHeight  - 115;
+    let windowSize = window.innerHeight  - 100;
 
     for(let i = 1 ; i <= 2 ; i++) {
         if(i == 1) {
             document.getElementById("mainframe" + i).style.height = windowSize + 'px';
         } else {
-            document.getElementById("mainframe" + i).style.height = (windowSize - 37) + 'px';
+            document.getElementById("mainframe" + i).style.height = (windowSize - 35) + 'px';
         }
     }
 
@@ -500,12 +500,12 @@ window.onresize = function() {
         clearTimeout(timer);
     }
     timer = setTimeout(function() {
-        let windowSize = window.innerHeight - 115;
+        let windowSize = window.innerHeight - 100;
         for(let i = 1 ; i <= 2 ; i++) {
             if(i == 1) {
                 document.getElementById("mainframe" + i).style.height = windowSize + 'px';
             } else {
-                document.getElementById("mainframe" + i).style.height = (windowSize - 30) + 'px';
+                document.getElementById("mainframe" + i).style.height = (windowSize - 35) + 'px';
             }
         }
     }, 200);

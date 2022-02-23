@@ -13,7 +13,7 @@
         <table>
             <tr>
                 <td style="width: 850px;" rowspan="2"><h1 style="line-height: 50%;">戦術機特性編成シミュレーター</h1></td>
-                <td style="width: 100px; font-size: 9px; text-align-last: right;" colspan="3">最終更新日時:2022/02/23 0:00</td>
+                <td style="width: 100px; font-size: 9px; text-align-last: right;" colspan="3">最終更新日時:2022/02/24 0:34</td>
             </tr>
             <tr>
                 <td style="width: 100px;"><a href="#" class="btn btn-new btn-radius" onClick="local_storage_save()">SAVE</a></td>
@@ -23,7 +23,7 @@
         </table>
         <div style="white-space: nowrap;">
             <div>
-                <div class="mainframe" id="mainframe1" style="overflow-x: hidden;">
+                <div class="mainframe" id="mainframe1">
                     <table class="sotowaku">
                         <tr>
                             <td style="width: 400px; height: 250px;"><div id="main_table"></div></td>
@@ -54,7 +54,22 @@
                         </tr>
                     </table>
                 </div>
-                <div style="vertical-align: top; display: inline-block; overflow-y: hidden; padding: 0px 10px; white-space: nowrap;">
+                <div style="vertical-align: top; display: inline-block; padding: 0px 10px; white-space: nowrap;">
+                    <h3 style="line-height: 0%;">パーツ世代効果</h3>
+                    <table id="gene-setup" class="gene-table">
+                        <tr>
+                            <th>世代</th><td><img src="src/img/gen/1.png"></td><td><img src="src/img/gen/2.png"></td><td><img src="src/img/gen/3.png"></td><td><img src="src/img/gen/4.png"></td><td><img src="src/img/gen/5.png"></td>
+                        </tr>
+                        <tr>
+                            <th>装備数</th><td><div id="gen1">0</div></td><td><div id="gen2">0</div></td><td><div id="gen3">0</div></td><td><div id="gen4">0</div></td><td><div id="gen5">0</div></td>
+                        </tr>
+                    </table>
+                    <table id="gene-value" class="gene-table">
+                        <tr>
+                            <th>上昇値</th><td style="width: 211px;"></td>
+                        </tr>
+                    </table>
+
                     <h3 style="line-height: 0%;">適用中の特性一覧</h3>
                     <div class="mainframe" id="mainframe2">
                         <div class="total-option-list" id="total-option" style="border: 0px;"></div>

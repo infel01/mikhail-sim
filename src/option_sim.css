@@ -157,6 +157,49 @@
     display: flex;
 }
 
+/* 装備世代効果 */
+.gene-table {
+    font-family: 'ヒラギノ角ゴ';
+    border-collapse: collapse;
+}
+
+.gene-table th {
+    border: 1px gray solid;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: #172a38;
+    color: white;
+    font-size: 12px;
+    height: 29px;
+    width: 75px;
+    padding: 5px;
+}
+
+.gene-table tr {
+    display: flex;
+}
+
+.gene-table td {
+    margin-top: -1px;
+    margin-left: -1px;
+    padding: 0px 0px;
+    border: 1px gray solid;
+    width: 43px;
+    height: 29px;
+}
+
+.gene-table img {
+    padding: 0px 0px;
+    display: block;
+    margin: auto;
+    margin-top: 1px;
+}
+.gene-table div[id*=gen] {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px;
+}
+
 *,
 *:before,
 *:after {
