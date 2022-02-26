@@ -65,3 +65,23 @@ function total_option_table_draw(DataBox) {
                 '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td></tr>';
     return htm_cd1;
 }
+
+function updateInfomation () {
+    updateTime = [
+        "2022/02/26 12:30",
+        "2022/02/26 10:24"
+        
+    ];
+    updateInfo = [
+        "更新情報表示を実装",
+        "本ページ公開"
+    ];
+
+    let htm_cd = "";
+
+    for(let i = 0 ; i < updateTime.length ; i++) {
+        htm_cd = htm_cd + '<div style="width: 150px; display:inline-block; padding: 2px 0px;">' + updateTime[i] + '</div><div style="width: 500px; display: inline-block; padding: 2px 0px;">' + updateInfo[i] + '</div><br>'
+    }
+    document.getElementById("update-info").innerHTML = htm_cd;
+
+}

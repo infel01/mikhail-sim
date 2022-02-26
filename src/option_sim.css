@@ -253,3 +253,9 @@ a.btn-new:hover {
 a.btn-radius {
   border-radius: 50vh;
 }
+
+.update-info {
+    font-size: 14px;
+    white-space: wrap;
+    font-family: 'ヒラギノ角ゴ';
+}

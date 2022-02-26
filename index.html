@@ -6,14 +6,17 @@
         <script type="text/javascript" src="src/option_sim_db.js"></script>
         <script type="text/javascript" src="src/option_sim_support.js"></script>
         <script type="text/javascript" src="src/option_sim_html_drawer.js"></script>
+
         <link rel="stylesheet" href="src/option_sim.css">
+        <link rel="stylesheet" href="src/modal_window.css">
+
 
     </head>
-    <body>        
+    <body>
         <table>
             <tr>
                 <td style="width: 850px;" rowspan="2"><h1 style="line-height: 50%;">戦術機特性編成シミュレーター</h1></td>
-                <td style="width: 100px; font-size: 9px; text-align-last: right;" colspan="3">最終更新日時:2022/02/26 10:45</td>
+                <td style="width: 100px; font-size: 9px; text-align-last: right;" colspan="3"><a href="#" id="openModal">最終更新日時:2022/02/26 10:45</a></td>
             </tr>
             <tr>
                 <td style="width: 100px;"><a href="#" class="btn btn-new btn-radius" onClick="local_storage_save()">SAVE</a></td>
@@ -77,6 +80,23 @@
                 </div>
             </div>
         </div>
+
+<!-- モーダルエリアここから -->
+<section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+      <div class="modalContents">
+        <h1 style="line-height: 20%;">更新情報</h1>
+        <div id="update-info" class="update-info"></div>
+      </div>
+      <div id="closeModal" class="closeModal">
+        ×
+      </div>
+    </div>
+</section>
+  <!-- モーダルエリアここまで -->
+        <script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="src/modal_window.js"></script>
         </form></body>
     <leg>
     </leg>

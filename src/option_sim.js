@@ -224,6 +224,7 @@ function page_load() {
     }
 
     partsChangeEvent();
+    updateInfomation();
 
     sessionStorage.setItem('start_flg', 0);
 
