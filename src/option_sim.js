@@ -85,7 +85,7 @@ var partsData = {
                 {opid : 0, type: "-", group: 0, value: "0"}],}
 };
 
-var parts_id = [
+var partsId = [
     "main",
     "sub",
     "r_spare",
@@ -218,10 +218,12 @@ function page_load() {
 
     sessionStorage.setItem('start_flg', 1);
 
-    for(let i = 0 ; i < parts_id.length ; i++) {
-        parts_table_draw(parts_id[i]);
-        page_loading(parts_id[i]);
+    for(let i = 0 ; i < partsId.length ; i++) {
+        parts_table_draw(partsId[i]);
+        page_loading(partsId[i]);
     }
+
+    partsChangeEvent();
 
     sessionStorage.setItem('start_flg', 0);
 
@@ -293,7 +295,6 @@ function rarity_select(element) {
     }
 
     var rarity_table;
-    let start_flg = sessionStorage.getItem("start_flg");
 
     for(let i = 0 ; i <= 3 ; i++) {
         if(rarity_table[r][i].drawflg == 1) {
@@ -316,8 +317,9 @@ function option_select(element, num) {
     let set_option = [5];
     let add_option;
     let skip_flg;
-
     let start_flg = sessionStorage.getItem("start_flg");
+
+    if(start_flg == 0) partsChangeEvent();
 
     //特性IDの取得
     for(let i = 0 ; i <= 4 ; i++) {
@@ -417,9 +419,9 @@ function total_option_calc() {
         total_option_value[i].value = 0;
     }
     
-    for(let i = 0 ; i < parts_id.length ; i++) {
+    for(let i = 0 ; i < partsId.length ; i++) {
         for(let j = 0 ; j <= 4 ; j++) {
-            let DataBox = partsData[parts_id[i]].op[j];
+            let DataBox = partsData[partsId[i]].op[j];
             if(Number(DataBox.value) > 0 && DataBox.opid != '0') {
                 for(let x = 0 ; x < total_option_value.length ; x++) {
                     if(total_option_value[x].id == DataBox.opid) {
@@ -446,26 +448,54 @@ function total_option_calc() {
     document.getElementById("total-option").innerHTML = total_option_code;
 }
 
+function partsChangeEvent() {
+    let genData = { gen1: 0, gen2: 0, gen3: 0, gen4: 0, gen5: 0};
+    const SE_parts_list = [ "head", "body", "r_arm", "l_arm", "leg", "jump"];
+    const gen_effect_list = {
+        gen1: [0, 0, 0, 0, 0, 0, 0],
+        gen2: [0, 0.4, 0.8, 1.2, 1.7, 2.1, 2.5],
+        gen3: [0, 0.8, 1.7, 2.5, 3.3, 4.2, 5.0],
+        gen4: [0, 1.2, 2.5, 3.8, 5.0, 6.2, 7.5],
+        gen5: [0, 1.7, 3.3, 5.0, 6.7, 8.3, 10.0]
+    }
+    let gen_total = 0;
+    
+    
+    for(let j = 0 ; j < SE_parts_list.length ; j++) {
+        let selectParts = document.getElementById(SE_parts_list[j]).value;
+        
+        for(let i = 0 ; i < PSE_list.length ; i++) {
+            if(master_parts_list[selectParts].text == PSE_list[i].name && i != 0) genData["gen" + PSE_list[i].gen]++;
+        }
+    }
+    for(let i = 1 ; i <= 5 ; i++) {
+        document.getElementById("gen" + i).innerHTML = genData["gen" + i];
+        gen_total = gen_total + Math.floor(gen_effect_list["gen" + i][genData["gen" + i]]*10)/10;
+    }
+    
+    document.getElementById("g-total").innerHTML = Math.floor(gen_total * 10) / 10 + "%";
+}
 
 function optionOnChangeEvent(id_num, value) {
-    option_select(parts_id[id_num], value);
+    option_select(partsId[id_num], value);
 }
 
 function rarityOnChangeEvent(id_num) {
-    rarity_select(parts_id[id_num]);
+    rarity_select(partsId[id_num]);
 }
 
 function textOnChangeEvent(id_num) {
-    option_value(parts_id[id_num]);
-    
+    option_value(partsId[id_num]);   
 }
+
+
 
 function local_storage_save() {
     let result = window.confirm("ローカルへ編成データを保存しますか？");
 
     if(result) {
-        for(let i = 0 ; i < parts_id.length ; i++) {
-            localStorage.setItem(parts_id[i] + "-partsData" , JSON.stringify(partsData[parts_id[i]]));
+        for(let i = 0 ; i < partsId.length ; i++) {
+            localStorage.setItem(partsId[i] + "-partsData" , JSON.stringify(partsData[partsId[i]]));
         }
         alert("保存が完了しました。");
     } 

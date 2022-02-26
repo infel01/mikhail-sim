@@ -274,7 +274,7 @@ var master_parts_list = [
     { id: 186, text: '殲撃8型', value: 'jump'}
 ];
 
-var parts_setup_effect_list = [
+var PSE_list = [
     { name: '撃震', gen: 1},
     { name: '撃震【国連】', gen: 1},
     { name: '瑞鶴', gen: 2},
