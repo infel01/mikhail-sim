@@ -206,14 +206,17 @@ function radio_check(element) {
 
 function page_load() {
 //初期化用
-    let windowSize = window.innerHeight  - 100;
+    let windowSize = 0; 
 
-    for(let i = 1 ; i <= 2 ; i++) {
-        if(i == 1) {
-            document.getElementById("mainframe" + i).style.height = windowSize + 'px';
-        } else {
-            document.getElementById("mainframe" + i).style.height = (windowSize - 160) + 'px';
-        }
+    if(navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+        windowSize = window.innerHeight;
+        if(windowSize > 800) windowSize = 800;
+        document.getElementById("mainframe1").style.height = windowSize + 'px';
+        document.getElementById("mainframe2").style.height = (windowSize -160) + 'px';
+    } else {
+        windowSize = window.innerHeight - 100;
+        document.getElementById("mainframe1").style.height = windowSize + 'px';
+        document.getElementById("mainframe2").style.height = (windowSize - 160) + 'px';
     }
 
     sessionStorage.setItem('start_flg', 1);
