@@ -418,7 +418,8 @@ function option_value(element) {
 
 function total_option_calc() {
     let total_option_code = '<table><tr><th style="width: 200px;">特性名称</th>' +
-    '<th style="width: 80px;">特性合計値</th><th style="width: 80px;">効果リミット</th></tr>';
+    '<th style="width: 50px;">合計</th><th style="width: 50px;">上限</th>';
+    if(document.getElementById("effectTextOn").checked == true) total_option_code = total_option_code + '<th style="width: 600px;">効果</th></tr>';
     for(let i = 0 ; i < total_option_value.length ; i++) {
         total_option_value[i].value = 0;
     }

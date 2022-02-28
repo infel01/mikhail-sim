@@ -61,18 +61,21 @@ function total_option_table_draw(DataBox) {
     }
 
     htm_cd1 =   '<tr><td style="width: 200px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">'+ master_option_list[DataBox.id].name +'</td>' +
-                '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + re_calc + percent_draw + '</td>' +
-                '<td style="width: 80px; justify-content: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td></tr>';
+                '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + re_calc + percent_draw + '</td>' +
+                '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td>';
+    if(document.getElementById("effectTextOn").checked == true) htm_cd1 = htm_cd1 + '<td style="width: 500px; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effectText + '</td></tr>';
     return htm_cd1;
 }
 
 function updateInfomation () {
     updateTime = [
+        "2022/02/28 23:33",
         "2022/02/26 12:30",
         "2022/02/26 10:24"
         
     ];
     updateInfo = [
+        "特性一覧に「効果文を表示する」のチェックボックスを追加",
         "更新情報表示を実装",
         "本ページ公開"
     ];

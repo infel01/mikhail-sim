@@ -102,8 +102,8 @@
 }
 
 .option-table select {
-    width: 215px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
     border: 0px;
     font-size: 12px;
     margin-top: 1px;
@@ -127,22 +127,22 @@
     margin-top: 1px;
 }
 
-.total-option-list {
+.total-option-list table {
     font-family: 'ヒラギノ角ゴ';
     border: 1px gray solid;
     border-collapse: collapse;
     color: black;
+    padding: 0px 0px;
+    white-space: wrap;
 }
 
 .total-option-list tr {
-    display: flex;
+/*    display: flex; */
     border: 0px;
 }
 
 .total-option-list th {
     border: 1px gray solid;
-    margin-top: -1px;
-    margin-left: -1px;
     background-color: #172a38;
     color: white;
     font-size: 12px;
@@ -150,11 +150,8 @@
 
 .total-option-list td {
     border: 1px gray solid;
-    margin-top: -1px;
-    margin-left: -1px;
     background-color: white;
     font-size: 12px;
-    display: flex;
 }
 
 /* 装備世代効果 */
@@ -165,39 +162,34 @@
 
 .gene-table th {
     border: 1px gray solid;
-    margin-top: -1px;
-    margin-left: -1px;
     background-color: #172a38;
     color: white;
     font-size: 12px;
-    height: 29px;
+    height: 10px;
     width: 75px;
     padding: 5px;
 }
 
-.gene-table tr {
-    display: flex;
-}
-
 .gene-table td {
-    margin-top: -1px;
-    margin-left: -1px;
     padding: 0px 0px;
     border: 1px gray solid;
     width: 43px;
-    height: 29px;
+    height: 10px;
 }
 
 .gene-table img {
-    padding: 0px 0px;
+    padding: 1px 1px;
     display: block;
-    margin: auto;
-    margin-top: 1px;
 }
 .gene-table div[id*=gen] {
+    height: 18px;
     text-align: center;
-    font-size: 13px;
-    margin: 5px;
+    font-size: 12px;
+}
+
+.gene-table div[id=g-total] {
+    text-align: right;
+    font-size: 12px;
 }
 
 
