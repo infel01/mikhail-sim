@@ -52,29 +52,33 @@ function total_option_table_draw(DataBox) {
 
     let color_value = re_calc - master_option_list[DataBox.id].effect_limit;
 
-    if(color_value <= 0) {
+    if(color_value <= 0 || (master_option_list[DataBox.id].add_flg == 0 && DataBox.count == 1)) {
         color_flg = 0;
-    } else if(color_value <= 20) {
+    } else if(color_value <= 20 || (master_option_list[DataBox.id].add_flg == 0 && DataBox.count <= 3)) {
         color_flg = 1;
-    } else if(color_value > 20) {
+    } else if(color_value > 20 || (master_option_list[DataBox.id].add_flg == 0 && DataBox.count > 3)) {
         color_flg = 2;
     }
 
-    htm_cd1 =   '<tr><td style="width: 200px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">'+ master_option_list[DataBox.id].name +'</td>' +
+    htm_cd1 =   '<tr><td style="width: 250px; color: ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">'+ master_option_list[DataBox.id].name +'</td>' +
                 '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + re_calc + percent_draw + '</td>' +
-                '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td>';
-    if(document.getElementById("effectTextOn").checked == true) htm_cd1 = htm_cd1 + '<td style="width: 500px; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effectText + '</td></tr>';
+                '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effect_limit + percent_draw + '</td>' +
+                '<td style="width: 50px; text-align: right; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + DataBox.count + '</td>';
+    if(document.getElementById("effectTextOn").checked == true) htm_cd1 = htm_cd1 + '<td style="width: 600px; ' + fontcolor[color_flg] + '; background-color: ' + color[color_flg] + ';">' + master_option_list[DataBox.id].effectText + '</td>';
+    htm_cd1 = htm_cd1 + '</tr>';
     return htm_cd1;
 }
 
 function updateInfomation () {
     updateTime = [
+        "2022/03/03 00:23",
         "2022/02/28 23:33",
         "2022/02/26 12:30",
         "2022/02/26 10:24"
         
     ];
     updateInfo = [
+        "極効果・OS特性・機体制御補助装置特性を特性一覧に反映するように追加",
         "特性一覧に「効果文を表示する」のチェックボックスを追加",
         "更新情報表示を実装",
         "本ページ公開"
@@ -83,7 +87,7 @@ function updateInfomation () {
     let htm_cd = "";
 
     for(let i = 0 ; i < updateTime.length ; i++) {
-        htm_cd = htm_cd + '<div style="width: 150px; display:inline-block; padding: 2px 0px;">' + updateTime[i] + '</div><div style="width: 500px; display: inline-block; padding: 2px 0px;">' + updateInfo[i] + '</div><br>'
+        htm_cd = htm_cd + '<div style="width: 150px; display:inline-block; padding: 2px 0px; vertical-align: center;">' + updateTime[i] + '</div><div style="width: 500px; display: inline-block; padding: 2px 0px; vertical-align: center;">' + updateInfo[i] + '</div><br>'
     }
     document.getElementById("update-info").innerHTML = htm_cd;
 

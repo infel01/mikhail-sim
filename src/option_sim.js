@@ -101,88 +101,89 @@ var partsId = [
 ];
 
 var total_option_value = [
-    { id: 1, value: 0},
-    { id: 2, value: 0},
-    { id: 3, value: 0},
-    { id: 4, value: 0},
-    { id: 5, value: 0},
-    { id: 6, value: 0},
-    { id: 7, value: 0},
-    { id: 8, value: 0},
-    { id: 9, value: 0},
-    { id: 10, value: 0},
-    { id: 11, value: 0},
-    { id: 12, value: 0},
-    { id: 13, value: 0},
-    { id: 14, value: 0},
-    { id: 15, value: 0},
-    { id: 16, value: 0},
-    { id: 17, value: 0},
-    { id: 18, value: 0},
-    { id: 19, value: 0},
-    { id: 20, value: 0},
-    { id: 21, value: 0},
-    { id: 22, value: 0},
-    { id: 23, value: 0},
-    { id: 24, value: 0},
-    { id: 25, value: 0},
-    { id: 26, value: 0},
-    { id: 27, value: 0},
-    { id: 28, value: 0},
-    { id: 29, value: 0},
-    { id: 30, value: 0},
-    { id: 31, value: 0},
-    { id: 32, value: 0},
-    { id: 33, value: 0},
-    { id: 34, value: 0},
-    { id: 35, value: 0},
-    { id: 36, value: 0},
-    { id: 37, value: 0},
-    { id: 38, value: 0},
-    { id: 39, value: 0},
-    { id: 40, value: 0},
-    { id: 41, value: 0},
-    { id: 42, value: 0},
-    { id: 43, value: 0},
-    { id: 44, value: 0},
-    { id: 45, value: 0},
-    { id: 46, value: 0},
-    { id: 47, value: 0},
-    { id: 48, value: 0},
-    { id: 49, value: 0},
-    { id: 50, value: 0},
-    { id: 51, value: 0},
-    { id: 52, value: 0},
-    { id: 53, value: 0},
-    { id: 54, value: 0},
-    { id: 55, value: 0},
-    { id: 56, value: 0},
-    { id: 57, value: 0},
-    { id: 58, value: 0},
-    { id: 59, value: 0},
-    { id: 60, value: 0},
-    { id: 61, value: 0},
-    { id: 62, value: 0},
-    { id: 63, value: 0},
-    { id: 64, value: 0},
-    { id: 65, value: 0},
-    { id: 66, value: 0},
-    { id: 67, value: 0},
-    { id: 68, value: 0},
-    { id: 69, value: 0},
-    { id: 70, value: 0},
-    { id: 71, value: 0},
-    { id: 72, value: 0},
-    { id: 73, value: 0},
-    { id: 74, value: 0},
-    { id: 75, value: 0},
-    { id: 76, value: 0},
-    { id: 77, value: 0},
-    { id: 78, value: 0},
-    { id: 79, value: 0},
-    { id: 80, value: 0},
-    { id: 81, value: 0},
-    { id: 82, value: 0}
+    { id: 1, value: 0, count: 0},
+    { id: 2, value: 0, count: 0},
+    { id: 3, value: 0, count: 0},
+    { id: 4, value: 0, count: 0},
+    { id: 5, value: 0, count: 0},
+    { id: 6, value: 0, count: 0},
+    { id: 7, value: 0, count: 0},
+    { id: 8, value: 0, count: 0},
+    { id: 9, value: 0, count: 0},
+    { id: 10, value: 0, count: 0},
+    { id: 11, value: 0, count: 0},
+    { id: 12, value: 0, count: 0},
+    { id: 13, value: 0, count: 0},
+    { id: 14, value: 0, count: 0},
+    { id: 15, value: 0, count: 0},
+    { id: 16, value: 0, count: 0},
+    { id: 17, value: 0, count: 0},
+    { id: 18, value: 0, count: 0},
+    { id: 19, value: 0, count: 0},
+    { id: 20, value: 0, count: 0},
+    { id: 21, value: 0, count: 0},
+    { id: 22, value: 0, count: 0},
+    { id: 23, value: 0, count: 0},
+    { id: 24, value: 0, count: 0},
+    { id: 25, value: 0, count: 0},
+    { id: 26, value: 0, count: 0},
+    { id: 27, value: 0, count: 0},
+    { id: 28, value: 0, count: 0},
+    { id: 29, value: 0, count: 0},
+    { id: 30, value: 0, count: 0},
+    { id: 31, value: 0, count: 0},
+    { id: 32, value: 0, count: 0},
+    { id: 33, value: 0, count: 0},
+    { id: 34, value: 0, count: 0},
+    { id: 35, value: 0, count: 0},
+    { id: 36, value: 0, count: 0},
+    { id: 37, value: 0, count: 0},
+    { id: 38, value: 0, count: 0},
+    { id: 39, value: 0, count: 0},
+    { id: 40, value: 0, count: 0},
+    { id: 41, value: 0, count: 0},
+    { id: 42, value: 0, count: 0},
+    { id: 43, value: 0, count: 0},
+    { id: 44, value: 0, count: 0},
+    { id: 45, value: 0, count: 0},
+    { id: 46, value: 0, count: 0},
+    { id: 47, value: 0, count: 0},
+    { id: 48, value: 0, count: 0},
+    { id: 49, value: 0, count: 0},
+    { id: 50, value: 0, count: 0},
+    { id: 51, value: 0, count: 0},
+    { id: 52, value: 0, count: 0},
+    { id: 53, value: 0, count: 0},
+    { id: 54, value: 0, count: 0},
+    { id: 55, value: 0, count: 0},
+    { id: 56, value: 0, count: 0},
+    { id: 57, value: 0, count: 0},
+    { id: 58, value: 0, count: 0},
+    { id: 59, value: 0, count: 0},
+    { id: 60, value: 0, count: 0},
+    { id: 61, value: 0, count: 0},
+    { id: 62, value: 0, count: 0},
+    { id: 63, value: 0, count: 0},
+    { id: 64, value: 0, count: 0},
+    { id: 65, value: 0, count: 0},
+    { id: 66, value: 0, count: 0},
+    { id: 67, value: 0, count: 0},
+    { id: 68, value: 0, count: 0},
+    { id: 69, value: 0, count: 0},
+    { id: 70, value: 0, count: 0},
+    { id: 71, value: 0, count: 0},
+    { id: 72, value: 0, count: 0},
+    { id: 73, value: 0, count: 0},
+    { id: 74, value: 0, count: 0},
+    { id: 75, value: 0, count: 0},
+    { id: 76, value: 0, count: 0},
+    { id: 77, value: 0, count: 0},
+    { id: 78, value: 0, count: 0},
+    { id: 79, value: 0, count: 0},
+    { id: 80, value: 0, count: 0},
+    { id: 81, value: 0, count: 0},
+    { id: 82, value: 0, count: 0},
+    { id: 83, value: 0, count: 0}
 ];
 
 function type_check(option_list, element, flg) {
@@ -212,11 +213,11 @@ function page_load() {
         windowSize = window.innerHeight;
         if(windowSize > 800) windowSize = 800;
         document.getElementById("mainframe1").style.height = windowSize + 'px';
-        document.getElementById("mainframe2").style.height = (windowSize -160) + 'px';
+        document.getElementById("mainframe2").style.height = (windowSize -170) + 'px';
     } else {
         windowSize = window.innerHeight - 100;
         document.getElementById("mainframe1").style.height = windowSize + 'px';
-        document.getElementById("mainframe2").style.height = (windowSize - 160) + 'px';
+        document.getElementById("mainframe2").style.height = (windowSize - 170) + 'px';
     }
 
     sessionStorage.setItem('start_flg', 1);
@@ -417,13 +418,168 @@ function option_value(element) {
 }
 
 function total_option_calc() {
-    let total_option_code = '<table><tr><th style="width: 200px;">特性名称</th>' +
-    '<th style="width: 50px;">合計</th><th style="width: 50px;">上限</th>';
-    if(document.getElementById("effectTextOn").checked == true) total_option_code = total_option_code + '<th style="width: 600px;">効果</th></tr>';
+    const partsDraw = [
+        "assist",
+        "os",
+        "main",
+        "sub",
+        "r_spare",
+        "l_spare",
+        "head",
+        "body",
+        "r_arm",
+        "l_arm",
+        "leg",
+        "jump"
+    ]
+    let eTF = document.getElementById("effectTextOn").checked;
+    let partsEffectStat;
+    let percent_draw = '';
+    let total_option_code = '<table><tr><th style="width: 250px;">特性名称</th>' +
+    '<th style="width: 50px;">合計</th><th style="width: 50px;">上限</th><th style="width: 50px;">装備数</th>';
+    if(eTF == true) total_option_code = total_option_code + '<th style="width: 600px;">効果</th>';
+    total_option_code = total_option_code + '</tr>'
+
     for(let i = 0 ; i < total_option_value.length ; i++) {
         total_option_value[i].value = 0;
+        total_option_value[i].count = 0;
     }
     
+    for(let i = 0 ; i < partsDraw.length ; i ++) {
+        if(partsData[partsDraw[i]].id == 0) continue;
+        partsEffectStat = null;
+        for(let x = 0 ; x < PRE_list.length ; x++) {
+            if(PRE_list[x].id == partsData[partsDraw[i]].id) {
+                partsEffectStat = PRE_list[x];
+            }
+        }
+        if(i == 0) {
+            switch(partsData[partsDraw[i]].id) {
+                case '16':
+                    total_option_code = total_option_code + '<tr><td style="width: 250px;">オペレーション・バイ・ワイヤ</td>' +
+                    '<td style="width: 50px; text-align: right;">5.0%</td>' +
+                    '<td style="width: 50px;"></td>' +
+                    '<td style="width: 50px;"></td>';
+                    break;
+                case '17':
+                    total_option_code = total_option_code + '<tr><td style="width: 250px;">オペレーション・バイ・ワイヤ&ライト</td>' +
+                    '<td style="width: 50px; text-align: right;">7.5%</td>' +
+                    '<td style="width: 50px;"></td>' +
+                    '<td style="width: 50px;"></td>';
+                    break;
+                case '18':
+                    total_option_code = total_option_code + '<tr><td style="width: 250px;">オペレーション・バイ・ライト</td>' +
+                    '<td style="width: 50px; text-align: right;">10.0%</td>' +
+                    '<td style="width: 50px;"></td>' +
+                    '<td style="width: 50px;"></td>';
+                    break;
+            }
+            if(eTF == true) total_option_code = total_option_code + '<td style="width: 600px;">機動性能（ステップ速度・ダッシュ速度・ジャンプ速度）がアップ</td>';
+            total_option_code = total_option_code + '</tr>';
+        } else if(i == 1) {
+            if(eTF == true) {
+                for(let j = 0 ; j <= 6 ; j++) {
+                    if(partsEffectStat["effectId" + j] == 0) break;
+                    let line = '';
+                    if(partsEffectStat["effectId" + (j + 1)] == 0) {
+                        line = '┗';
+                    } else {
+                        line = '┣';
+                    }
+
+                    percent_draw = '';
+                    if(master_option_list[partsEffectStat["effectId" + j]].percent_flg == 1) {
+                        percent_draw = '%';
+                    } else if(partsEffectStat["effectId" + j] == 47) {
+                        percent_draw = '00';
+                    };
+
+                    if(j == 0) {
+                        total_option_code = total_option_code + '<tr><td style="width: 250px;">' + partsEffectStat.effectName + '</td>';
+                    } else {
+                        total_option_code = total_option_code + '<tr><td style="width: 250px;">' + line + '</td>';
+                        console.log(j);
+                    }
+                    total_option_code = total_option_code + '<td style="width: 50px; text-align: right;">' + partsEffectStat["effectValue" + j] + percent_draw + '</td>' +
+                    '<td style="width: 50px; text-align: right;">' + master_option_list[partsEffectStat["effectId" + j]].effect_limit + percent_draw + '</td>' +
+                    '<td style="width: 50px;"></td>' + '<td style="width: 600px;">【特性名称】' + master_option_list[partsEffectStat["effectId" + j]].name + '</td></tr>';
+
+                    if(master_option_list[partsData[partsDraw[i]].id].add_flg == 0) {
+                        if(total_option_value[partsEffectStat["effectId" + j] - 1].value < Number(partsEffectStat["effectValue" + j])) total_option_value[partsEffectStat["effectId" + j] - 1].value = Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    } else {
+                        total_option_value[partsEffectStat["effectId" + j] - 1].value += Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    }
+                }
+            } else {
+                total_option_code = total_option_code + '<tr><td style="width: 250px;">' + partsEffectStat.effectName + '</td><td style="width: 50px;"></td><td style="width: 50px;"></td><td style="width: 50px;"></td></tr>' ;
+
+                for(let j = 0 ; j <= 6 ; j++) {
+                    if(partsEffectStat["effectId" + j] == 0) break;
+                    if(master_option_list[partsData[partsDraw[i]].id].add_flg == 0) {
+                        if(total_option_value[partsEffectStat["effectId" + j] - 1].value < Number(partsEffectStat["effectValue" + j])) total_option_value[partsEffectStat["effectId" + j] - 1].value = Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    } else {
+                        total_option_value[partsEffectStat["effectId" + j] - 1].value += Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    }
+                }
+            }
+        } else {
+            if(partsData[partsDraw[i]].rarity != 3) continue;
+            if(eTF == true) {
+                for(let j = 0 ; j <= 6 ; j++) {
+                    if(partsEffectStat["effectId" + j] == 0) break;
+                    let line = '';
+                    if(partsEffectStat["effectId" + (j + 1)] == 0) {
+                        line = '┗';
+                    } else {
+                        line = '┣';
+                    }
+
+                    percent_draw = '';
+                    if(master_option_list[partsEffectStat["effectId" + j]].percent_flg == 1) {
+                        percent_draw = '%';
+                    } else if(partsEffectStat["effectId" + j] == 47) {
+                        percent_draw = '00';
+                    };
+
+                    if(j == 0) {
+                        total_option_code = total_option_code + '<tr><td style="width: 250px; font-weight: bold; color: #FF6E00;">' + partsEffectStat.effectName + '</td>';
+                    } else {
+                        total_option_code = total_option_code + '<tr><td style="width: 250px;">' + line + '</td>';
+                    }
+                    total_option_code = total_option_code + '<td style="width: 50px; text-align: right;">' + partsEffectStat["effectValue" + j] + percent_draw + '</td>' +
+                    '<td style="width: 50px; text-align: right;">' + master_option_list[partsEffectStat["effectId" + j]].effect_limit + percent_draw + '</td>' +
+                    '<td style="width: 50px;"></td><td style="width: 600px;">【特性名称】' + master_option_list[partsEffectStat["effectId" + j]].name + '</td></tr>';
+
+                    if(master_option_list[partsEffectStat["effectId" + j]].add_flg == 0) {
+                        if(total_option_value[partsEffectStat["effectId" + j] - 1].value < Number(partsEffectStat["effectValue" + j])) total_option_value[partsEffectStat["effectId" + j] - 1].value = Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    } else {
+                        total_option_value[partsEffectStat["effectId" + j] - 1].value += Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                    }
+                }
+            } else {
+                total_option_code = total_option_code + '<tr><td style="width: 250px;  font-weight: bold; color: #FF6E00;">' + partsEffectStat.effectName + '</td><td style="width: 50px;"></td><td style="width: 50px;"></td><td style="width: 50px;"></td></tr>' ;
+                for(let j = 0 ; j <= 6 ; j++) {
+                    if(partsEffectStat["effectId" + j] == 0) break;
+                    if(master_option_list[partsEffectStat["effectId" + j]].add_flg == 0) {
+                        if(total_option_value[partsEffectStat["effectId" + j] - 1].value < Number(partsEffectStat["effectValue" + j])) total_option_value[partsEffectStat["effectId" + j] - 1].value = Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                        console.log("a");
+                    } else {
+                        total_option_value[partsEffectStat["effectId" + j] - 1].value += Number(partsEffectStat["effectValue" + j]);
+                        total_option_value[partsEffectStat["effectId" + j] - 1].count += 1;
+                        console.log("b");
+                    }
+                }
+            }
+        }
+    }
+
     for(let i = 0 ; i < partsId.length ; i++) {
         for(let j = 0 ; j <= 4 ; j++) {
             let DataBox = partsData[partsId[i]].op[j];
@@ -432,9 +588,11 @@ function total_option_calc() {
                     if(total_option_value[x].id == DataBox.opid) {
                         if(master_option_list[DataBox.opid].add_flg == 0) {
                             if(total_option_value[x].value < Number(DataBox.value)) total_option_value[x].value = Number(DataBox.value);
+                            total_option_value[x].count += 1;
                             break;
                         } else {
                             total_option_value[x].value += Number(DataBox.value);
+                            total_option_value[x].count += 1;
                             break;
                         }
                     }
@@ -535,13 +693,16 @@ window.onresize = function() {
         clearTimeout(timer);
     }
     timer = setTimeout(function() {
-        let windowSize = window.innerHeight - 100;
-        for(let i = 1 ; i <= 2 ; i++) {
-            if(i == 1) {
-                document.getElementById("mainframe" + i).style.height = windowSize + 'px';
-            } else {
-                document.getElementById("mainframe" + i).style.height = (windowSize - 160) + 'px';
-            }
+        let windowSize;
+        if(navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+            windowSize = window.innerHeight;
+            if(windowSize > 800) windowSize = 800;
+            document.getElementById("mainframe1").style.height = windowSize + 'px';
+            document.getElementById("mainframe2").style.height = (windowSize -170) + 'px';
+        } else {
+            windowSize = window.innerHeight - 100;
+            document.getElementById("mainframe1").style.height = windowSize + 'px';
+            document.getElementById("mainframe2").style.height = (windowSize - 170) + 'px';
         }
     }, 200);
 };
